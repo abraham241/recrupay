@@ -52,7 +52,9 @@ export default function Home() {
             Essayez une démo{" "}
           </button>
           <button className="flex justify-center items-center gap-3 border border-1 px-4 py-2 rounded-full">
-            <FaPlay />
+            <span className="text-green-800">
+              <FaPlay />
+            </span>
             Voir la video
           </button>
         </div>
