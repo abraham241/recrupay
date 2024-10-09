@@ -5,14 +5,14 @@ import recrulogo from "../public/images/recrulogo.jpg";
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between py-10 px-20 items-center">
+      <nav className="flex justify-between py-10 px-20 items-center ">
         <div className="flex justify-between items-center gap-32">
           <Image
             src={recrulogo}
             alt="Picture of the author"
             className="h-20 w-32"
           />
-          <div className="flex justify-between gap-5 font-bold">
+          <div className="gap-5 font-bold hidden md:flex justify-between">
             <Link href="/">A propos</Link>
             <Link href="/">Nos tarifs</Link>
             <Link href="/">FAQ</Link>
@@ -20,14 +20,16 @@ export default function Home() {
         </div>
 
         <div className="flex gap-8">
-          <button>Se connecter</button>
+          <button className="hidden md:flex items-center xl:flex 2xl:flex">
+            Se connecter
+          </button>
           <button className="bg-green-800 p-3 rounded-full text-white">
             Démo gratuit
           </button>
         </div>
       </nav>
 
-      <div className="">
+      <div className=" py-10 px-20">
         <h1 className="text-5xl font-bold text-center">
           Le logiciel qu’il vous faut pour <br />
           gérer <span className="inline-block mb-2">vos</span>{" "}
@@ -43,6 +45,8 @@ export default function Home() {
           formation et le recrutement de votre entreprise.
         </p>
       </div>
+
+      {/*  */}
     </>
   );
 }
